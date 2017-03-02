@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule "^action/(.*)/(.*)/(.*)/(.*)$" "/index.php?action=$1&dev=$2&wid=$3&tid=$4" [NC,PT]
+RewriteRule "^action/(.*)/(.*)/(.*)$" "/index.php?action=$1&dev=$2&wid=$3" [NC,PT]
+RewriteRule "^action/(.*)/(.*)$" "/index.php?action=$1&wid=$2" [NC,PT]
+RewriteRule "^action/(.*)$" "/index.php?action=$1" [NC,PT]
+
+
+
+
