@@ -1,31 +1,31 @@
 <?php
+  require 'noSession.php';
   session_start();
-   // if($_SESSION['uid'] == 1) {
-    $i = $arr = $add_name = ""; 
-    $role_id = $set = $wid = "";
-    $arr = array(array());
-    $add_name = "Manager";
-    echo "Select managers";
-    echo "<br>";
-    $wid = $_GET['wid'];
-    list_members();  
-    echo "<br><br>";
-    echo "Select Developers";
-    echo "<br>";
-    list_members();
+  $i = $arr = $add_name = ""; 
+  $role_id = $set = $wid = "";
+  $arr = array(array());
+  $add_name = "Manager";
+  echo "Select managers";
+  echo "<br>";
+  $wid = $_GET['wid'];
+  list_members();  
+  echo "<br><br>";
+  echo "Select Developers";
+  echo "<br>";
+  list_members();
 
-    function list_members() {
-      global $i, $arr, $add_name, $role_id, $set, $wid;
+  function list_members() {
+    global $i, $arr, $add_name, $role_id, $set, $wid;
       
       //Establishing Database connection
-      require 'database_connection.php';
+    require 'database_connection.php';
 
        //Retrieving role_id for the desired role.
-      $sql = "SELECT role_id from roles WHERE role_name = '" . $add_name . "'";
-      $result = $conn->query($sql);
-      if ($row = $result->fetch_assoc()) {
-         $role_id = $row['role_id'];
-      }
+    $sql = "SELECT role_id from roles WHERE role_name = '" . $add_name . "'";
+    $result = $conn->query($sql);
+    if ($row = $result->fetch_assoc()) {
+      $role_id = $row['role_id'];
+    }
 
       // Retrieving list of all users who are neither managers nor developers.
       if (!empty($result)) {

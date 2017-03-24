@@ -3,7 +3,9 @@
   // Retrieving values from form.
   $tname = $descr = $developer = $time = "";
   $nameErr = $timeErr = $descErr = $devErr = "";
+  require 'noSession.php';
   require 'logoutdisplay.php';
+
   $wid = $_GET['wid'];
   if ($_SESSION['role'] == "Manager") { 
   	if(isset($_POST['submit'])) {  

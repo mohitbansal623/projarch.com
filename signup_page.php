@@ -1,8 +1,10 @@
 <?php
   session_start();
-  // if (!isset($_SESSION['uid']) && !isset($_SESSION['role'])) {
-  // Sign page for creating new account
   
+  if (isset($_SESSION['role']) || isset($_SESSION['uid'])) {
+    header('Location: /');
+  }
+
   // define variables and set to empty values
   $uid = $name = $email = $passwd = $select = "";
   $nameErr = $emailErr = $pwdErr = "";
@@ -80,16 +82,5 @@
     </div>';
   }  
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="sass/stylesheets/homepage.css">
-</head>
-<body>
-	
-</body>
-</html>
-
 
    

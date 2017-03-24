@@ -1,6 +1,8 @@
 <?php
 	session_start();
+	require 'noSession.php';
 	require 'logoutdisplay.php';
+	
 	$spent_time = "";
 	$time = $bar = $comments = "";	
 	$progressErr = $timeErr = $commErr = ""; 

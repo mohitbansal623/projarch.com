@@ -1,6 +1,8 @@
 <?php
+  require 'noSession.php';
   require 'logoutdisplay.php';
   session_start();
+
   function getWorkspaces() {
   // Displaying list of workspaces for Admin
   if ($_SESSION['role'] == "Admin" || $_SESSION['uid'] == 1) {

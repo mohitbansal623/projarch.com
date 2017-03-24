@@ -1,4 +1,5 @@
 <?php
+  require 'noSession.php';
   session_start();
   // if ($_SESSION['uid'] == 1) {
     $wid =  $_GET["wid"]; 

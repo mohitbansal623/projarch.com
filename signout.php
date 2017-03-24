@@ -1,11 +1,7 @@
 <?php
+	//Starting the session
 	session_start();
-?>
-<!DOCTYPE html>
-<html>
-<body>
 
-<?php
 	// remove all session variables
 	session_unset(); 
 	
@@ -15,5 +11,3 @@
 	//echo "You are successfully logged out<br>";
 	header('Location: /');
 ?>
-</body>
-</html>

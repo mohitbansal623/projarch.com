@@ -1,16 +1,16 @@
 <?php
   session_start();
-  // echo $_SESSION['role'];
-   // if ($_SESSION['role'] == "Manager") {
-    $arr = array(array());
-    $wid = $_GET['wid'];
-    require 'database_connection.php';
-    $add_name = "Developer";
-    $sql = "SELECT user_id, user_name FROM signup";
-    $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
-       $i = 0;
-       while($row = $result->fetch_assoc()) {
+  require 'noSession.php';
+  
+  $arr = array(array());
+  $wid = $_GET['wid'];
+  require 'database_connection.php';
+  $add_name = "Developer";
+  $sql = "SELECT user_id, user_name FROM signup";
+  $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      $i = 0;
+      while($row = $result->fetch_assoc()) {
         $uname = $row["user_name"];
         $key = $row["user_id"];
         for ($j = 0; $j < 2; $j++) { 

@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require 'noSession.php';
   //If Admin is login..
   if ($_SESSION["uid"] == 1) {
     $wid = $mng = $dev = "";

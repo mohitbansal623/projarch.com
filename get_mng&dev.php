@@ -1,5 +1,5 @@
 <?php
-print("sadsafadada");
+  require 'noSession.php';
   session_start();
   // if ($_SESSION['uid'] == 1) {
     $arr = array(array());

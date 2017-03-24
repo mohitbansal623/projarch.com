@@ -1,12 +1,11 @@
 <?php
   session_start();
+  require 'noSession.php';
   require 'logoutdisplay.php';
+  
   $wid = $_GET['wid'];
   ?>
-  <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="sass/stylesheets/homepage.css">
-    <script>
+<script>
  <?php 
     echo '
     function getuser() {

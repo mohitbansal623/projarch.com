@@ -107,11 +107,24 @@ th {
   color: white;
 }
 
-span, .list {
+.list {
 	color: white;
+}
+
+span {
+  color: red;
 }
 
 .create_task, .white {
 	color: white;
+}
+
+.corner {
+  position: absolute;
+  right: 12px;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
 }
 

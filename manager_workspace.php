@@ -1,6 +1,9 @@
 <?php
   session_start();
+  require 'noSession.php';
+  
   require 'logoutdisplay.php';
+
   function getmanagerWorkspaces() {
     require 'database_connection.php';
     $wid_arr = array();
@@ -9,7 +12,7 @@
       // echo "mohit";
       echo "<table class='table'> <tr><th>Workspace Name</th><th>Description</th><th>List of Task</th><th>Create Task</tr>";
       
-    ///Query for Displaying list of workspaces for manager.
+    //Query for Displaying list of workspaces for manager.
     	$sql = "SELECT distinct w.workspace_id, w.project_name,  w.description  FROM workspace AS w JOIN members AS m  ON w.workspace_id = m.workspace_id JOIN roles as r  ON m.role_id = r.role_id AND r.role_name = 'Manager' AND m.user_id = ". $_SESSION["uid"];
 
      	$result = $conn->query($sql);

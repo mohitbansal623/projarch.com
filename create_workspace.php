@@ -3,6 +3,8 @@ require 'logoutdisplay.php';
 ?>
 <?php
   session_start();
+  require 'noSession.php';
+  
   $wid = $pname = $date = $descr = $manager = $developer = "";
   $nameErr = $descErr = $mngErr = "";
   //This function will create a workspace.

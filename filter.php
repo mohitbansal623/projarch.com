@@ -1,4 +1,5 @@
 <?php
+  require 'noSession.php';
   require 'logoutdisplay.php';
   $task_id = $_GET['wid'];?>
   <html lang="en">

@@ -39,7 +39,8 @@ session_start();
  		break;
 
  	//This case will display the list of workspaces created by Admin	
- 	case 'getWorkspaces': 
+ 	case 'getWorkspaces':
+ 		echo "mohit"; 
  		require 'list_workspaces.php';
  		getWorkspaces();
  		break;

@@ -119,3 +119,13 @@ span, .list {
 .create_task, .white {
   color: white;
 }
+
+/* line 118, ../sass/homepage.scss */
+.corner {
+  position: absolute;
+  right: 12px;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+}
